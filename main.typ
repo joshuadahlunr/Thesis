@@ -187,13 +187,14 @@
 #chapter_include("chapter2.typ")
 #chapter_include("chapter3.typ")
 #chapter_include("chapter4.typ")
-#chapter_include("chapter5.typ")
+// #chapter_include("chapter5.typ")
 #chapter_include("chapter6.typ")
 
 // Bibliography
 #pagebreak()
 #set par(leading: single_spaced)
 #bibliography("bib.bib", title: "References", style: "acm.csl")
+// #bibliography("bib.bib", title: "References", style: "ieee")
 #set par(leading: double_spaced)
 
 // Appendices
@@ -208,4 +209,4 @@
 #show: appendix
 
 #include "appendixA.typ"
-// #chapter_include("appendixB.typ")
+#chapter_include("appendixB.typ")

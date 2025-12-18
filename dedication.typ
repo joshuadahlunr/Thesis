@@ -1,5 +1,7 @@
 #pagebreak()
 
+// #toc[chapter: "Dedication"]
+
 #align(center)[
 = Dedication
 

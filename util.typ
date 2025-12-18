@@ -1,4 +1,4 @@
-#let unnumbered_heading(content, depth: 2, centered: false) = if centered {
+#let unumbered_heading(content, depth: 2, centered: false) = if centered {
   align(center, heading(depth: depth, numbering: none, content))
 } else { heading(depth: depth, numbering: none, content) }
 
@@ -60,11 +60,11 @@
             let (columns, align, make_row) = {
                 if numbers {
                     // line numbering requested
-                    if type(numberstyle) == "auto" {
+                    // if type(numberstyle) == "auto" {
                         numberstyle = text.with(style: "italic", 
                                                 slashed-zero: true, 
                                                 size: .6em)
-                    }
+                    // }
                     ( ( auto, 1fr ),
                       ( right + horizon, left ),
                       e => {
@@ -91,7 +91,7 @@
                 gutter: 0pt,
                 inset: 2pt,
                 align: (col, _) => align.at(col),
-                fill: (c, row) => if (row / 2 + firstnumber) in highlight { hlcolor } else { none },
+                fill: (c, row) => /* if (row / 2 + firstnumber) in highlight { hlcolor } else */ { none },
                 ..content
                     .text
                     .split("\n")
